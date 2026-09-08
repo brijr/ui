@@ -1,0 +1,86 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "A button primitive built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "class-variance-authority", "cn"],
+      "files": [{ "path": "button.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "A text input primitive built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "input.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "A form label.",
+      "author": "brijr",
+      "dependencies": ["cn"],
+      "files": [{ "path": "label.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "A multiline text field.",
+      "author": "brijr",
+      "dependencies": ["cn"],
+      "files": [{ "path": "textarea.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "A content container with header, body, and footer slots.",
+      "author": "brijr",
+      "dependencies": ["cn"],
+      "files": [{ "path": "card.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "A small status or category label.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "class-variance-authority", "cn"],
+      "files": [{ "path": "badge.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "A visual divider.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "separator.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "A checkbox primitive built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "checkbox.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "A switch primitive built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "switch.tsx", "type": "registry:ui" }]
+    }
+  ]
+}

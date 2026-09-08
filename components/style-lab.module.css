@@ -1,0 +1,137 @@
+/* 12-column Swiss modular grid. 4 columns below 768px. */
+
+.page {
+  --lab-gutter: 1rem;
+  --lab-cols: 4;
+  --lab-guide: oklch(from var(--foreground) l c h / 0.04);
+  --lab-col: minmax(
+    0,
+    calc((100% - (var(--lab-cols) - 1) * var(--lab-gutter)) / var(--lab-cols))
+  );
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: repeat(4, var(--lab-col));
+  column-gap: var(--lab-gutter);
+  width: 100%;
+  max-width: 72rem;
+  min-height: 100svh;
+  margin-inline: auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.guides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(4, var(--lab-col));
+  column-gap: var(--lab-gutter);
+  padding: inherit;
+  pointer-events: none;
+}
+
+.guides > * {
+  border-inline: 1px solid var(--lab-guide);
+}
+
+.guides > *:nth-child(n + 5) {
+  display: none;
+}
+
+.section,
+.header {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: start;
+  column-gap: var(--lab-gutter);
+  row-gap: 0.75rem;
+  padding-block: 2rem;
+}
+
+.header {
+  border-top: 1px solid var(--border);
+}
+
+.section {
+  border-top: 1px solid var(--border);
+}
+
+.section:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.label {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  row-gap: 1rem;
+  align-content: start;
+  min-width: 0;
+}
+
+.lead {
+  grid-column: 1 / -2;
+  min-width: 0;
+}
+
+.toggle {
+  grid-column: -2 / -1;
+  justify-self: end;
+  align-self: start;
+}
+
+.spanAll {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.span3 {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.span2 {
+  grid-column: span 2;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .page {
+    --lab-cols: 12;
+    grid-template-columns: repeat(12, var(--lab-col));
+  }
+
+  .guides {
+    grid-template-columns: repeat(12, var(--lab-col));
+  }
+
+  .guides > *:nth-child(n + 5) {
+    display: block;
+  }
+
+  .section,
+  .header {
+    row-gap: 0;
+  }
+
+  .label {
+    grid-column: 1 / 4;
+  }
+
+  .body {
+    grid-column: 4 / -1;
+  }
+
+  .span3 {
+    grid-column: span 3;
+  }
+}

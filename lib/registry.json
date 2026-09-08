@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Utils",
+      "description": "The cn helper re-exported from the cn package.",
+      "author": "brijr",
+      "dependencies": ["cn"],
+      "files": [
+        {
+          "path": "utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    }
+  ]
+}
