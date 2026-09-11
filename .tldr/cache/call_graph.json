@@ -1,0 +1,20 @@
+{
+  "edges": [
+    {
+      "from_file": "components/theme-provider.tsx",
+      "from_func": "onKeyDown",
+      "to_file": "components/theme-provider.tsx",
+      "to_func": "isTypingTarget"
+    },
+    {
+      "from_file": "components/theme-provider.tsx",
+      "from_func": "ThemeHotkey",
+      "to_file": "components/theme-provider.tsx",
+      "to_func": "isTypingTarget"
+    }
+  ],
+  "languages": [
+    "typescript"
+  ],
+  "timestamp": 1788905885.396585
+}
