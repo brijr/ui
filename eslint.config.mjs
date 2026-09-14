@@ -8,6 +8,35 @@ const eslintConfig = defineConfig([
   ...nextTs,
   {
     plugins: { shadcn },
+    rules: {
+      "shadcn/no-restyle": [
+        "error",
+        {
+          allow: ["layout"],
+          contracts: [
+            // Footers are action rows; callers may set gap between children.
+            {
+              pattern: "^CardFooter$",
+              allow: ["layout", "spacing"],
+            },
+          ],
+        },
+      ],
+      "shadcn/no-raw-colors": "error",
+      "shadcn/no-arbitrary-values": "error",
+      "shadcn/no-inline-styles": "error",
+      "shadcn/no-unknown-classes": "error",
+      "shadcn/require-static-classes": "error",
+    },
+  },
+  {
+    // Components own their appearance; structural values like ring-[3px] are expected.
+    files: ["components/ui/**"],
+    rules: {
+      "shadcn/no-restyle": "off",
+      "shadcn/no-arbitrary-values": "off",
+      "shadcn/require-static-classes": "off",
+    },
   },
   // Override default ignores of eslint-config-next.
   globalIgnores([
