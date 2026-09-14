@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+# Dispatcher for project-local brijr/ui verification.
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../../.." && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# shellcheck source=common.sh
+source "$SCRIPT_DIR/common.sh"
+
+usage() {
+  cat <<'EOF'
+Usage: verify-brijr-ui <command> [args]
+
+Commands:
+  launch                 Build if needed and start next start
+  doctor                 Check process, HTTP, and client interactivity
+  cleanup                Stop the PID recorded for this VERIFY_ROOT
+  browser <subcommand>   Drive the style lab (goto|click|fill|press|snapshot|screenshot|eval)
+  http get <path>        Fetch a registry/HTTP path into an artifact file
+
+Environment:
+  VERIFY_RUN_ID    Run id (default: timestamp)
+  VERIFY_ROOT      State directory (default: /tmp/brijr-ui-verify/$VERIFY_RUN_ID)
+  VERIFY_PORT      Optional fixed port
+  VERIFY_REBUILD=1 Force npm run build
+  VERIFY_ARTIFACTS Evidence directory (default: $VERIFY_ROOT/artifacts)
+EOF
+}
+
+cmd="${1:-}"
+if [[ -z "$cmd" ]]; then
+  usage
+  exit 2
+fi
+shift || true
+
+case "$cmd" in
+  launch)
+    verify_launch
+    ;;
+  doctor)
+    verify_doctor
+    ;;
+  cleanup)
+    verify_cleanup
+    ;;
+  browser)
+    ensure_state_loaded
+    node "$SCRIPT_DIR/browser.mjs" "$@"
+    ;;
+  http)
+    ensure_state_loaded
+    verify_http "$@"
+    ;;
+  -h|--help|help)
+    usage
+    ;;
+  *)
+    echo "Unknown command: $cmd" >&2
+    usage >&2
+    exit 2
+    ;;
+esac
