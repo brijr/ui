@@ -81,6 +81,266 @@
       "author": "brijr",
       "dependencies": ["@base-ui/react", "cn"],
       "files": [{ "path": "switch.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "A stack of collapsible panels built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "accordion.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "A callout for user attention.",
+      "author": "brijr",
+      "dependencies": ["class-variance-authority", "cn"],
+      "files": [{ "path": "alert.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "A modal dialog that interrupts to confirm an action.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "registryDependencies": ["button"],
+      "files": [{ "path": "alert-dialog.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "title": "Aspect Ratio",
+      "description": "Constrains content to a fixed width-to-height ratio.",
+      "author": "brijr",
+      "dependencies": ["cn"],
+      "files": [{ "path": "aspect-ratio.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "An image with a text fallback, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "avatar.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "A navigation trail showing the current location.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "breadcrumb.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "A single panel that expands and collapses, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "collapsible.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "description": "A menu triggered by right click, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "context-menu.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "A modal overlay for focused tasks, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "dialog.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "A menu of actions triggered by a button, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "dropdown-menu.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "description": "A preview card shown on hover, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "hover-card.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input OTP",
+      "description": "A one-time password field, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "input-otp.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "description": "A horizontal set of menus, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "menubar.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "title": "Navigation Menu",
+      "description": "A site navigation menu with panels, built on Base UI.",
+      "author": "brijr",
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn",
+        "lucide-react"
+      ],
+      "files": [{ "path": "navigation-menu.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Controls for navigating between pages of content.",
+      "author": "brijr",
+      "dependencies": ["cn", "lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [{ "path": "pagination.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "A floating panel anchored to a trigger, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "popover.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "A bar that shows task completion, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "progress.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "description": "A set of mutually exclusive options, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "radio-group.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "A scrollable region with custom scrollbars, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "scroll-area.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "A dropdown for choosing one option, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "select.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "A dialog that slides in from an edge, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn", "lucide-react"],
+      "files": [{ "path": "sheet.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "A placeholder shown while content loads.",
+      "author": "brijr",
+      "dependencies": ["cn"],
+      "files": [{ "path": "skeleton.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "A control for selecting a value from a range, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "slider.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "A set of styled table primitives.",
+      "author": "brijr",
+      "dependencies": ["cn"],
+      "files": [{ "path": "table.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Toggle between related panels, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "tabs.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "A two-state button, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "class-variance-authority", "cn"],
+      "files": [{ "path": "toggle.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "A group of toggles that share state, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "class-variance-authority", "cn"],
+      "registryDependencies": ["toggle"],
+      "files": [{ "path": "toggle-group.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "A small popup with supplementary info, built on Base UI.",
+      "author": "brijr",
+      "dependencies": ["@base-ui/react", "cn"],
+      "files": [{ "path": "tooltip.tsx", "type": "registry:ui" }]
     }
   ]
 }

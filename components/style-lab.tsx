@@ -16,6 +16,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
 
+import { LabGallery } from "./lab-gallery"
 import s from "./style-lab.module.css"
 
 const surfaces = [
@@ -81,7 +82,7 @@ function Swatch({ name, className }: { name: string; className: string }) {
   )
 }
 
-function LabSection({
+export function LabSection({
   title,
   children,
 }: {
@@ -309,6 +310,8 @@ export function StyleLab() {
           </Card>
         </div>
       </LabSection>
+
+      <LabGallery />
     </>
   )
 }
