@@ -10,6 +10,8 @@ function AspectRatio({
   return (
     <div
       data-slot="aspect-ratio"
+      // Dynamic ratio prop requires an inline style; theme styling stays in className.
+      // eslint-disable-next-line shadcn/no-inline-styles -- API: ratio → aspectRatio
       style={{ aspectRatio: ratio, ...style }}
       className={cn("relative w-full", className)}
       {...props}

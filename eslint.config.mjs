@@ -38,6 +38,15 @@ const eslintConfig = defineConfig([
       "shadcn/require-static-classes": "off",
     },
   },
+  {
+    // Style lab gallery intentionally demos chrome on primitives (buttonVariants on
+    // triggers, dashed hit targets, etc.). Keep color/arbitrary/inline/unknown rules on.
+    files: ["components/lab-gallery.tsx"],
+    rules: {
+      "shadcn/no-restyle": "off",
+      "shadcn/require-static-classes": "off",
+    },
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
