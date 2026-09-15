@@ -150,9 +150,9 @@ function MenubarLabel({
   className,
   inset,
   ...props
-}: MenuPrimitive.GroupLabel.Props & { inset?: boolean }) {
+}: React.ComponentProps<"div"> & { inset?: boolean }) {
   return (
-    <MenuPrimitive.GroupLabel
+    <div
       data-slot="menubar-label"
       data-inset={inset}
       className={cn(
